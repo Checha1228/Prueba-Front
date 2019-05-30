@@ -1,0 +1,35 @@
+// Default breakpoints
+$breakpoints: (
+	mobile-xs: 340px,
+	mobile-xl: 569px, // breakpoint added in comps (http://ultron.wdproux.wdig.com/dcl/Cruise101/WhyCruise/SupplementalSection/index.html#artboard4)
+    tablet: 768px,
+    desktop-s: 960px, // breakpoint added in comps (http://ultron.wdproux.wdig.com/dcl/Cruise101/WhyCruise/PersistentPersonaNav/index.html#artboard2)
+    desktop: 1024px,
+    desktop-l: 1440px
+);
+
+// Fonts
+$normal: (400);
+$bold: (700);
+$light: (300);
+$big-size: (30px);
+$medium-size: (24px);
+$default-size: (20px);
+$btn-text-size: (18px);
+$text-size: (16px);
+$description-size: (10px);
+
+// Colors
+$colors: (
+    'transparent': transparent,
+    'primary': #000,
+    'secondary': #fff,
+    'gold': #FFC60B,
+    'gris-cc': #ccc,
+    'gris-4': #444,
+    'fondo': #f3f3f3,
+    'pink': #B46E90,
+    'purple': #4c00c6,
+);
+
+

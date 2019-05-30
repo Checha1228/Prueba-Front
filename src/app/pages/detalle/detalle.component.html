@@ -1,0 +1,94 @@
+<section class="cont-default-bose p-section-default">
+		<div class="name-article">
+			<h2 class="title-default-page">
+					{{producto?.nombre}}
+			</h2>
+			<div class="cont-stars">
+				<button class="btn-star-score">
+					<i class="icon-star"></i>
+				</button>
+				<button class="btn-star-score">
+					<i class="icon-star"></i>
+				</button>
+				<button class="btn-star-score">
+					<i class="icon-star"></i>
+				</button>
+				<button class="btn-star-score">
+					<i class="icon-star"></i>
+				</button>
+				<button class="btn-star-score">
+					<i class="icon-star"></i>
+				</button>
+			</div>
+		</div>
+		<p class="price-article">
+			{{producto?.precio}}
+		</p>
+</section>
+<section class="cont-info-producto-detail">
+	<article class="cont-swiper-article">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+						<img src="{{producto?.picture}}" alt="" class="img-responsive">
+				</div>
+				<div class="swiper-slide"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="cont-btn-heart">
+			<button class="btn-heart">
+				<i class="icon-heart"></i>
+			</button>
+		</div>
+	</article>
+	<article class="cont-specs-article">
+		<p class="text-shipping-article">
+			Free 2-Day shipping for orders of $50 or more, and free return shipping.
+			<br><strong>30-day Risk Free Trial</strong>
+		</p>
+		<div class="cont-buttons-cart">
+			<div class="cont-quantity-article">
+				<input class="default-quantity" type="text" value="{{cantidad}}" name="" id="">
+				<div class="selector-quantity">
+					<button class="btn-quantity remove" (click)="restarCantidad()">
+						-
+					</button>
+					<button class="btn-quantity add" (click)="sumarCantidad()">
+						+
+					</button>
+				</div>
+			</div>
+			<div class="cont-btn-add-cart">
+				<button class="btn-default" (click)="agregarAlCarrito()">
+					<i class="icon-cart"></i>
+					Add to car
+				</button>
+			</div>
+		</div>
+		<h2 class="title-default-page">
+			SPECS
+		</h2>
+		<div class="cont-specs-article">
+			<ul class="specs-article">
+				<li class="item-specs-article" *ngFor="let produc of producto?.especificaciones">
+					<div class="cont-icon-spec">
+						<figure class="icon-spcecs-bg">
+							<i class="icon-specs"></i>
+						</figure>
+						<p class="text-specs">{{produc.name}}</p>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</article>
+</section>
+<section class="cont-info-article">
+	<h3 class="title-info-article">
+			Renowned noise cancelling headphones — now with Bose AR
+	</h3>
+	<p class="text-info-detail">
+			{{producto?.descripcion}}
+	</p>
+</section>

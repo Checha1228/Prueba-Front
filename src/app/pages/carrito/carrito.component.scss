@@ -1,0 +1,88 @@
+@import './base';
+
+.section-cart {
+	height: 70vh;
+	
+}
+.cont-list-car {
+	margin: 0 auto;
+	width: 90%;
+	@include from-breakpoint('desktop') {
+		width: 70%;
+	}
+}
+
+.item-list-cart,
+.data-article {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.item-list-cart {
+	border-bottom: 1px solid colors('gris-cc');
+	padding: $default-size 0;
+}
+
+.actions-article {
+	position: relative;
+}
+
+.cont-img-article {
+	border: 1px solid colors('primary');
+	height: 90px;
+	margin-right: 6px;
+	width: 90px;
+}
+
+.cont-btn-delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.icon-trash {
+	background-image: url('../../../assets/images/icons/icon-trash.svg');
+	background-size: contain;
+	height: 24px;
+	width: 24px;	
+}
+
+.data-article {
+	margin-top: 6px;
+}
+
+.cont-quantity-article {
+	width: 44%;
+}
+
+.price-cart {
+	color: colors('gris-4');
+	font-size: $btn-text-size;
+	font-weight: $bold;
+	margin-top:12px;
+}
+
+.title-detail-bose {
+	margin-bottom: $default-size;
+}
+
+form {
+	width: 100%;
+}
+
+.input-code {
+	background: colors('secondary');
+	border: 0;
+	border-radius: 25px;
+	padding: 10px;
+	width: 94%;
+}
+
+.cont-resume-cart {
+	@include from-breakpoint('desktop') {
+		position: fixed;
+		right: 0;
+		top: 90px;
+	}
+}

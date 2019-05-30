@@ -1,0 +1,133 @@
+@import './base';
+
+
+.cont-info-producto-detail {
+	@include from-breakpoint('tablet') {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		width: 80%;	
+	}
+
+	@include from-breakpoint('desktop') {
+		width: 70%;
+	}
+}
+.p-section-default {
+	padding-bottom: 0;
+}
+
+.cont-name-article {
+	margin: $default-size auto 0;
+	width: 90%;
+}
+
+.price-article {
+	color: colors('gris-4');
+	font-size: $big-size;
+	font-weight: $bold;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.cont-swiper-article {
+	margin: $default-size auto $big-size;
+	position: relative;
+	width: 80%;
+	@include from-breakpoint('tablet') {
+		margin-right: $default-size;
+	}
+}
+
+.cont-btn-heart {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+
+	.btn-heart {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+.icon-heart {
+	background-image: url('../../../assets/images/icons/icon-heart.svg');
+	background-size: contain;
+	height: 100%;
+	width: 100%;
+}
+
+.text-shipping-article {
+	font-size: $text-size;
+	margin: $default-size auto;
+	text-align: center;
+	width: 80%;
+	@include from-breakpoint('tablet') {
+		width: 90%;
+	}
+}
+
+.cont-buttons-cart {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 auto;
+	width: 98%;
+}
+
+.specs-article {
+	display: inline-block;
+}
+
+.item-specs-article {
+	float: left;
+	margin-bottom: 12px;
+	width: calc(100%/2);
+}
+
+.icon-spcecs-bg {
+	background: colors('primary');
+	border-radius: 100%;
+	margin-right: 6px;
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+
+.text-specs {
+	font-size: $description-size;
+	font-weight: $light;
+	float: left;
+	margin-top: 6%;
+	width: 66%;
+}
+
+.title-info-article {
+	font-size: $medium-size;
+	line-height: $medium-size;
+	margin: $default-size 0;
+}
+
+.cont-info-article {
+	margin-bottom: 50px;
+	@include from-breakpoint('tablet') {
+		margin: 0 auto 50px;
+		width: 80%;	
+	}
+	@include from-breakpoint('desktop') {
+		width: 70%;
+	}
+}
+
+.cont-specs-article {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.cont-btn-add-cart {
+	margin-top: 0 !important;
+	width: 140%;
+}
+
+

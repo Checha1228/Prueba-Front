@@ -1,0 +1,136 @@
+@import './base';
+
+header {
+	height: 96px;
+	padding: 0 6%;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+	}
+
+	li {
+		a {
+			color: colors('secondary');
+			display: block;
+			padding: 20px 20px;
+			text-decoration: none;
+			
+			&:hover{
+				color: colors('primary');
+  				background-color: colors('gris-4');
+				
+				  @include from-breakpoint('tablet') {
+					color: colors('gris-4');
+  					background-color: transparent; 
+				  }
+			}
+
+			@include from-breakpoint('tablet') {
+				padding: 20px 30px;
+			}
+		}
+
+		@include from-breakpoint('tablet') {
+			float: left;
+		}
+	}
+	.cont-logo-bose {
+		display: block;
+		float: left;
+		font-size: 2em;
+		text-decoration: none;
+		width: 160px;
+	}
+	
+	.items-menu {
+		clear: both;
+		max-height: 0;
+		transition: max-height .2s ease-out;
+		background: colors('primary');
+		position: absolute;
+		left: 0;
+		top: 96px;
+		width: 100%;
+
+		@include from-breakpoint('tablet') {
+			clear: none;
+			top: 20px;
+			left: 60%;
+			max-height: none;
+		}
+
+		@include from-breakpoint('desktop-l') {
+			left: 70%;
+		}
+	}
+	.icon-menu {
+		cursor: pointer;
+		display: inline-block;
+		margin-left: 10%;
+		margin-top: 6%;
+		padding: 28px 20px;
+		position: absolute;
+		right: 30px;
+		user-select: none;
+		.nav-icon {
+			background: colors('secondary');
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background .2s ease-out;
+			width: 18px;
+
+			&:before,
+			&::after {
+				background: colors('secondary');
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all .2s ease-out;
+				width: 100%;
+			}
+			&:before {
+				top: -5px;
+			}
+			&:after {
+				top: -5px;
+			}
+		}
+		@include from-breakpoint('tablet') {
+			display: none;
+		}
+	}
+	.menu-btn {
+		display: none;
+		&:checked{
+			~ .items-menu {
+				max-height: 240px;
+			}
+			~ .icon-menu {
+				.nav-icon {
+					background: transparent;
+					&:before {
+						transform: rotate(-45deg);
+					}
+
+					&:after {
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+.cont-btn-add-cart {
+	display: none;
+}
+
+

@@ -1,0 +1,119 @@
+@import './base';
+
+
+.cont-home-bose {
+	background: linear-gradient(to bottom, rgba(180, 110, 144, 0.69) 0%, rgba(70, 0, 198, 0.69) 100%), url('../../../assets/images/img-bg-home.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	height: 86vh;
+	position: relative;
+	padding-top: 24%;
+	z-index: 0;	
+	width: 100%;
+
+	@include from-breakpoint('tablet') {
+		flex-direction: row;
+		padding-top: 0;
+	}
+}
+
+.cont-text-home {
+	color: colors('secondary');
+	margin-top: 8%;
+	width: 100%;
+
+	@include from-breakpoint('tablet') {
+		margin-top: 20%;
+		width: 50%;
+	}
+}
+
+.title-detail-home {
+	font-size: $medium-size;
+	margin: 10px auto 0;
+	text-align: center;
+	width: 60%;
+
+	@include from-breakpoint('tablet') {
+		font-size: $big-size;
+		width: 40%;
+	}
+}
+
+.text-detail-home {
+	font-size: $text-size;
+	font-weight: $light;
+	margin: 10px auto;
+	text-align: center;
+	width: 80%;
+
+	a {
+		color: colors('secondary');
+		transition: all 0.3s;
+		&:hover {
+			color: colors('pink');
+		}
+	}
+}
+
+.shape-bg-headphones {
+	background: colors('secondary');
+	border-radius: 500px 0 0 500px;
+	bottom: 6px;
+	height: 320px;
+	position: absolute;
+	right: 0;
+	width: 98%;
+	z-index: -1;
+
+	@include from-breakpoint('tablet') {
+		bottom: 50px;
+		width: 50%;
+	}
+}
+
+.cont-product-home {
+	bottom: 40px;
+	height: 240px;
+	position: absolute;
+	right: 40px;
+	width: 200px;
+
+	@include from-breakpoint('tablet') {
+		bottom: 74px;
+		right: 25%;
+	}
+}
+
+.subtitle-detail-bose {
+	font-weight: $light;
+	font-size: $text-size;
+	text-align: center;
+}
+
+.cont-img-detail {
+	margin: $default-size auto;
+	width: 60%;
+	@include from-breakpoint('desktop-l') {
+		width: 40%;
+	}
+}
+
+/*Swiper*/
+.swiper-container {
+	width: 100%;
+	height: 100%;
+  }
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-pagination {
+	position: inherit;
+}

@@ -1,0 +1,254 @@
+/* You can add global styles to this file, and also import other style files */
+@import './reset';
+@import './base';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+i {
+	background-repeat: no-repeat;
+	display: block;
+}
+
+button {
+	cursor: pointer;
+}
+
+.cont-header-bose {
+	background: colors('primary');
+}
+
+.p-section-default {
+	padding-top: 30% !important;
+
+	@include from-breakpoint('tablet') {
+		padding-top: 20% !important;
+	}
+
+	@include from-breakpoint('desktop') {
+		padding-top: 8% !important;
+	}
+}
+
+.cont-default-bose {
+	padding: 50px 0; 
+	width: 100%;
+
+	@include from-breakpoint('tablet') {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	@include from-breakpoint('desktop-l') {
+		width: 900px;
+	}
+}
+
+.title-detail-bose {
+	font-size: $big-size;
+	font-weight: $bold;
+	text-align: center;
+}
+
+.title-default-page,
+.title-default-car {
+	font-size: $medium-size;
+	font-weight: $bold;
+	text-transform: uppercase;
+	margin-bottom: $default-size;
+}
+
+.text-detail-bose {
+	font-size: $text-size;
+	font-weight: $light;
+	margin: $default-size auto;
+	text-align: center;
+	width: 80%;
+
+	@include from-breakpoint('desktop-l') {
+		width: 70%;
+	}
+}
+
+.cont-btn-add-cart-home {
+	display: none;
+	margin: $default-size auto;
+	width: 60%;
+
+	@include from-breakpoint('tablet') {
+		display: block;
+	}
+}
+
+.cont-btn-add-cart,
+.cont-btn-add-cart-home {
+	margin: $default-size auto;
+	width: 60%;
+
+	@include from-breakpoint('tablet') {
+		width: 40%;
+	}
+
+	.btn-default {
+		border: 2px solid colors('primary');
+		border-radius: 25px;
+		font-size: $btn-text-size;
+		font-weight: $bold;
+		letter-spacing: 2px;
+		padding: 10px 0;
+		position: relative;
+		transition: all 0.3s;
+		text-transform: uppercase;
+		width: 100%;
+		&:hover {
+			background: colors('primary');
+			color: colors('secondary');
+		}
+	}
+
+	.btn-default-white {
+		border: 2px solid colors('secondary');
+		border-radius: 25px;
+		color: colors('secondary');
+		font-size: $btn-text-size;
+		font-weight: $bold;
+		letter-spacing: 2px;
+		padding: 10px 0;
+		transition: all 0.3s;
+		text-transform: uppercase;
+		width: 100%;
+		&:hover {
+			background: colors('secondary');
+			color: colors('primary');
+		}
+	}
+}
+
+.cont-stars {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+
+	.btn-star-score {
+		height: 17px;
+		margin-right: 6px;
+		width: 17px;
+	}
+}
+
+.icon-star {
+	background-image: url('../src/assets/images/icons/icon-star.svg');
+	background-size: contain;
+	height: 17px;
+	width: 17px;
+}
+
+.icon-cart {
+	background-image: url('../src/assets/images/icons/icon-cart.svg');
+	background-size: contain;
+	height: 22px;
+	left: 18px;
+	position: absolute;
+	width: 25px;
+	display: none;
+}
+
+.cont-info-article {
+	margin: 0 auto;
+	width: 88%;
+}
+
+hr {
+	background: colors('gris-4');
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.cont-quantity-article {
+	position: relative;
+}
+
+.default-quantity {
+	border: 2px solid colors('primary');
+	border-radius: 25px;
+	font-size: $btn-text-size;
+	margin-right: 6px;
+	padding: 10px 0;
+	text-align: center;
+	width: 92%;
+}
+
+.selector-quantity {
+	display: flex;
+	justify-content: space-between;
+	left: 12px;
+	position: absolute;
+	top: 8px;
+	width: 72%;
+
+	.btn-quantity  {
+		font-size: $default-size;
+		font-weight: $bold;
+	}
+}
+
+.resume-cart,
+.cont-code-promotional {
+	background: colors('fondo');
+	margin-bottom: 20px;
+	padding: $default-size;
+}
+
+.cont-detail-resume {
+	background: colors('secondary');
+	padding: 10px;
+	margin-bottom: $default-size;
+}
+
+.resume-table {
+	margin: 0 auto;
+	width: 90%;
+
+	tr {
+		border-bottom: 1px solid colors('gris-cc');
+		display: table;
+		height: 40px;
+		width: 100%;
+		&:last-child {
+			border-bottom:  none;
+		}
+
+		td{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+} 
+
+.title-resume {
+	color: colors('gris-4');
+	font-size: $text-size;
+	font-weight: $light;
+}
+
+.number-resume {
+	font-weight: $bold;
+	text-align: right;
+}
+
+.text-total {
+	font-weight: $bold;
+}
+
+.align-right {
+	text-align: right;
+}
+
+
